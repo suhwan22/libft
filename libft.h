@@ -6,7 +6,7 @@
 /*   By: suhkim <suhkim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 21:48:42 by suhkim            #+#    #+#             */
-/*   Updated: 2022/03/13 18:48:42 by suhkim           ###   ########.fr       */
+/*   Updated: 2022/03/14 17:41:33 by suhkim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ void *ft_memset(void *b, int c, size_t len);
 size_t ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t ft_strlcpy(char *dst, char *src, size_t dstsize);
 size_t ft_strlen(const char *s);
+int	ft_strncmp(const char *s1, const char *s2, size_t n);
 
 #endif

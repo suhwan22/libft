@@ -6,11 +6,28 @@
 /*   By: suhkim <suhkim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 19:28:16 by suhkim            #+#    #+#             */
-/*   Updated: 2022/03/13 19:31:22 by suhkim           ###   ########.fr       */
+/*   Updated: 2022/03/14 16:26:30 by suhkim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	strncmp(const char *s1, const char *s2, size_t n)
-{
+#include "libft.h"
 
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	size_t	i;
+	const unsigned char	*sptr1;
+	const unsigned char	*sptr2;
+
+	sptr1 = (const unsigned char *)s1;
+	sptr2 = (const unsigned char *)s2;
+	i = 0;
+	while (*(sptr1 + 1) != 0 && *(sptr2 + i) != 0 && i < n)
+	{
+		if (*(sptr1 + i) != *(sptr2 + i))
+			return (*(sptr1 + i) - *(sptr2 + i));
+		i++;
+	}
+	if (i < n)
+		return (*(sptr1 + i) - *(sptr2 + i));
+	return (0);
 }

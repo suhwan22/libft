@@ -1,31 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: suhkim <suhkim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/13 19:14:21 by suhkim            #+#    #+#             */
-/*   Updated: 2022/03/14 16:36:23 by suhkim           ###   ########.fr       */
+/*   Created: 2022/03/14 20:43:41 by suhkim            #+#    #+#             */
+/*   Updated: 2022/03/14 21:06:12 by suhkim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_atoi(const char *str)
 {
-	const char	*ans;
-	const char	*sptr;
+	long	ans;
+	int		sign;
 
-	sptr = s;
-	if (c == 0)
-		return ((char *)sptr + ft_strlen(s));
-	ans = NULL;
-	while (*sptr)
+	ans = 0;
+	sign = 1;
+	while ((9 <= *str && *str <= 13) || *str == 32)
+		str++;
+	if (*str == '-' || *str == '+')
 	{
-		if (*(char *)sptr == (char)c)
-			ans = sptr;
-		sptr++;
+		if (*(str++) == '-')
+			sign = -1;
 	}
-	return ((char *)ans);
+	while (*str && *str >= '0' && *str <= '9')
+	{
+		ans = 10 * ans + (*str - '0');
+		str++;
+	}
+	if (ans < 0)
+}
+
+#include <stdio.h>
+#include <stlib.h>
+
+int main()
+{
+	printf("%d\n", atoi(
 }
