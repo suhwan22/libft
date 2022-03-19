@@ -6,7 +6,7 @@
 /*   By: suhkim <suhkim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 20:43:41 by suhkim            #+#    #+#             */
-/*   Updated: 2022/03/14 21:06:12 by suhkim           ###   ########.fr       */
+/*   Updated: 2022/03/18 18:08:42 by suhkim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,28 +16,26 @@ int	ft_atoi(const char *str)
 {
 	long	ans;
 	int		sign;
+	int		count;
 
+	count = 0;
 	ans = 0;
 	sign = 1;
-	while ((9 <= *str && *str <= 13) || *str == 32)
+	while (*str == ' ' || *str == '\t' || *str == '\v' || *str == '\r'
+		|| *str == '\n' || *str == '\f')
 		str++;
 	if (*str == '-' || *str == '+')
-	{
 		if (*(str++) == '-')
 			sign = -1;
-	}
 	while (*str && *str >= '0' && *str <= '9')
 	{
+		count++;
 		ans = 10 * ans + (*str - '0');
 		str++;
+		if ((count > 19 && sign == -1) || (ans < 0 && sign == -1))
+			return ((int)(-9223372036854775807 - 1));
+		else if ((count > 19 && sign == 1) || (ans < 0 && sign == 1))
+			return ((int)9223372036854775807);
 	}
-	if (ans < 0)
-}
-
-#include <stdio.h>
-#include <stlib.h>
-
-int main()
-{
-	printf("%d\n", atoi(
+	return (sign * (int)ans);
 }

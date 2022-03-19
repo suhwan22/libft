@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: suhkim <suhkim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/18 21:29:55 by suhkim            #+#    #+#             */
-/*   Updated: 2022/03/18 21:30:44 by suhkim           ###   ########.fr       */
+/*   Created: 2022/03/18 16:25:43 by suhkim            #+#    #+#             */
+/*   Updated: 2022/03/18 21:26:35 by suhkim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+void	*ft_calloc(size_t count, size_t size)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + ('a' - 'A'));
-	else
-		return (c);
+	void	*ret;
+
+	ret = malloc(count * size);
+	if (ret == NULL)
+		return (NULL);
+	ft_memset(ret, 0, size * count);
+	return (ret);
 }

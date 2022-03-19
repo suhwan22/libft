@@ -6,7 +6,7 @@
 /*   By: suhkim <suhkim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 18:33:12 by suhkim            #+#    #+#             */
-/*   Updated: 2022/03/13 18:24:19 by suhkim           ###   ########.fr       */
+/*   Updated: 2022/03/18 21:27:56 by suhkim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,23 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	if (dst == src)
 		return (dst);
-	dptr = dst;
-	sptr = src;
+	dptr = (unsigned char *)dst;
+	sptr = (unsigned char *)src;
 	if (src < dst)
+	{
 		while (len)
 		{
 			len--;
-			*(dptr + len) = *(sptr + len)
+			*(dptr + len) = *(sptr + len);
 		}
+	}
 	else
+	{
 		while (len)
 		{
 			*dptr++ = *sptr++;
 			len--;
 		}
+	}
 	return (dst);
 }
