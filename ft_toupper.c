@@ -6,11 +6,9 @@
 /*   By: suhkim <suhkim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 18:52:30 by suhkim            #+#    #+#             */
-/*   Updated: 2022/03/13 18:54:57 by suhkim           ###   ########.fr       */
+/*   Updated: 2022/03/22 21:03:51 by suhkim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_toupper(int c)
 {

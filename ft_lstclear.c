@@ -6,12 +6,12 @@
 /*   By: suhkim <suhkim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 19:22:49 by suhkim            #+#    #+#             */
-/*   Updated: 2022/03/22 19:28:24 by suhkim           ###   ########.fr       */
+/*   Updated: 2022/03/22 21:26:55 by suhkim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
+#include <stdlib.h>
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {

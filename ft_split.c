@@ -6,11 +6,10 @@
 /*   By: suhkim <suhkim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 15:14:36 by suhkim            #+#    #+#             */
-/*   Updated: 2022/03/22 17:42:01 by suhkim           ###   ########.fr       */
+/*   Updated: 2022/03/22 21:22:23 by suhkim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdlib.h>
 
 static int	check_set(char target, char set)

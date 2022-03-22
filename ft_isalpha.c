@@ -6,11 +6,9 @@
 /*   By: suhkim <suhkim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 18:17:12 by suhkim            #+#    #+#             */
-/*   Updated: 2022/03/18 20:46:58 by suhkim           ###   ########.fr       */
+/*   Updated: 2022/03/22 20:54:59 by suhkim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isalpha(int c)
 {

@@ -6,11 +6,11 @@
 /*   By: suhkim <suhkim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 14:52:20 by suhkim            #+#    #+#             */
-/*   Updated: 2022/03/14 16:45:12 by suhkim           ###   ########.fr       */
+/*   Updated: 2022/03/22 21:10:01 by suhkim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

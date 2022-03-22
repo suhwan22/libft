@@ -6,7 +6,7 @@
 /*   By: suhkim <suhkim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 19:14:21 by suhkim            #+#    #+#             */
-/*   Updated: 2022/03/14 16:36:23 by suhkim           ###   ########.fr       */
+/*   Updated: 2022/03/22 21:05:19 by suhkim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strrchr(const char *s, int c)
 	sptr = s;
 	if (c == 0)
 		return ((char *)sptr + ft_strlen(s));
-	ans = NULL;
+	ans = 0;
 	while (*sptr)
 	{
 		if (*(char *)sptr == (char)c)

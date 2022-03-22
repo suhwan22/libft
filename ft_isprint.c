@@ -6,16 +6,11 @@
 /*   By: suhkim <suhkim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 19:26:34 by suhkim            #+#    #+#             */
-/*   Updated: 2022/03/13 18:25:09 by suhkim           ###   ########.fr       */
+/*   Updated: 2022/03/22 20:59:28 by suhkim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 int	ft_isprint(int c)
 {
-	if (c >= ' ' && c <= '~')
-		return (1);
-	else
-		return (0);
+	return (c >= ' ' && c <= '~');
 }

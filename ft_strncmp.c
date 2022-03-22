@@ -6,11 +6,11 @@
 /*   By: suhkim <suhkim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 19:28:16 by suhkim            #+#    #+#             */
-/*   Updated: 2022/03/18 20:54:10 by suhkim           ###   ########.fr       */
+/*   Updated: 2022/03/22 21:05:58 by suhkim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

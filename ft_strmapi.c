@@ -6,7 +6,7 @@
 /*   By: suhkim <suhkim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 18:21:31 by suhkim            #+#    #+#             */
-/*   Updated: 2022/03/22 18:29:58 by suhkim           ###   ########.fr       */
+/*   Updated: 2022/03/22 21:25:25 by suhkim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	char			*newstr;
 	unsigned int	i;
 
-	if (!s)
+	if (!s || !f)
 		return (0);
 	newstr = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!newstr)

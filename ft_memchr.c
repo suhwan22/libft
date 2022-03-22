@@ -6,11 +6,11 @@
 /*   By: suhkim <suhkim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 14:15:17 by suhkim            #+#    #+#             */
-/*   Updated: 2022/03/14 16:25:46 by suhkim           ###   ########.fr       */
+/*   Updated: 2022/03/22 21:17:14 by suhkim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -24,5 +24,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		sptr++;
 		n--;
 	}
-	return (NULL);
+	return (0);
 }

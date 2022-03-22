@@ -6,7 +6,7 @@
 /*   By: suhkim <suhkim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 19:01:36 by suhkim            #+#    #+#             */
-/*   Updated: 2022/03/18 20:53:51 by suhkim           ###   ########.fr       */
+/*   Updated: 2022/03/22 21:04:47 by suhkim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)sptr);
 		sptr++;
 	}
-	return (NULL);
+	return (0);
 }
