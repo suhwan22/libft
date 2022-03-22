@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-INCDIR = includes
+INCDIR = .
 NAME = libft.a
 SOURCES = $(wildcard *.c)
 OBJECTS = $(SOURCES:.c=.o)

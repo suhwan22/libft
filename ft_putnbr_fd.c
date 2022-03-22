@@ -1,26 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: suhkim <suhkim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/18 18:21:40 by suhkim            #+#    #+#             */
-/*   Updated: 2022/03/22 16:46:22 by suhkim           ###   ########.fr       */
+/*   Created: 2022/03/22 18:39:15 by suhkim            #+#    #+#             */
+/*   Updated: 2022/03/22 18:51:29 by suhkim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
-char	*ft_strdup(const char *s1)
+static void	ft_putu_fd(unsigned int num, int fd)
 {
-	size_t	len;
-	char	*dstr;
+	char	c;
 
-	len = ft_strlen(s1);
-	dstr = (char *)malloc(sizeof(char) * (len + 1));
-	if (dstr == 0)
-		return (0);
-	ft_strlcpy(dstr, (char *)s1, len + 1);
-	return (dstr);
+	if (num / 10)
+	{
+		ft_putu_fd(num / 10, fd);
+	}
+	c = num % 10 + '0';
+	write(fd, &c, 1);
+}
+
+void	ft_putnbr_fd(int n, int fd)
+{
+	unsigned int	num;
+
+	if (n == 0)
+	{
+		write(fd, "0", 1);
+		return ;
+	}
+	num = n;
+	if (n < 0)
+	{
+		num = -n;
+		write(fd, "-", 1);
+	}
+	ft_putu_fd(num, fd);
 }

@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: suhkim <suhkim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/18 18:21:40 by suhkim            #+#    #+#             */
-/*   Updated: 2022/03/22 16:46:22 by suhkim           ###   ########.fr       */
+/*   Created: 2022/03/22 18:21:31 by suhkim            #+#    #+#             */
+/*   Updated: 2022/03/22 18:29:58 by suhkim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-char	*ft_strdup(const char *s1)
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
-	size_t	len;
-	char	*dstr;
+	char			*newstr;
+	unsigned int	i;
 
-	len = ft_strlen(s1);
-	dstr = (char *)malloc(sizeof(char) * (len + 1));
-	if (dstr == 0)
+	if (!s)
 		return (0);
-	ft_strlcpy(dstr, (char *)s1, len + 1);
-	return (dstr);
+	newstr = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!newstr)
+		return (0);
+	i = 0;
+	while (*(s + i))
+	{
+		*(newstr + i) = f(i, *(s + i));
+		i++;
+	}
+	*(newstr + i) = 0;
+	return (newstr);
 }
