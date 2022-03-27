@@ -6,7 +6,7 @@
 /*   By: suhkim <suhkim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 18:39:15 by suhkim            #+#    #+#             */
-/*   Updated: 2022/03/22 18:51:29 by suhkim           ###   ########.fr       */
+/*   Updated: 2022/03/27 16:29:03 by suhkim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,6 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	unsigned int	num;
 
-	if (n == 0)
-	{
-		write(fd, "0", 1);
-		return ;
-	}
 	num = n;
 	if (n < 0)
 	{
