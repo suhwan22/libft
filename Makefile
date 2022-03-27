@@ -6,7 +6,7 @@
 #    By: suhkim <suhkim@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/27 14:00:57 by suhkim            #+#    #+#              #
-#    Updated: 2022/03/27 14:42:50 by suhkim           ###   ########.fr        #
+#    Updated: 2022/03/27 16:53:02 by suhkim           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,7 @@ SRCS = ft_atoi.c \
 	   ft_memcpy.c \
 	   ft_memmove.c \
 	   ft_memset.c \
+	   ft_striteri.c \
 	   ft_putchar_fd.c \
 	   ft_putendl_fd.c \
 	   ft_putnbr_fd.c \
@@ -35,7 +36,6 @@ SRCS = ft_atoi.c \
 	   ft_split.c \
 	   ft_strchr.c \
 	   ft_strdup.c \
-	   ft_striteri.c \
 	   ft_strjoin.c \
 	   ft_strlcat.c \
 	   ft_strlcpy.c \
